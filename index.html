@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml", href="./assets/logo/Logo_archeo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathias Bellat | Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">
+  <svg width="24" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4L6 10H10V20H14V10H18L12 4Z" fill="black"/>
+  </svg>
+</button>
+  <body>
+    <nav id="desktop-nav">
+        <div>
+            <ul class="nav-links">
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#communication">Communications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#other">Others</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class ="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#formation" onclick="toggleMenu()">Formation</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
+                <li><a href="#communication" onclick="toggleMenu()">Communications</a></li>
+                <li><a href="#teaching" onclick="toggleMenu()">Teaching</a></li>
+                <li><a href="#other" onclick="toggleMenu()">Others</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 100px;"></div>
+    <section id="profile" class="section">
+        <div class="section_infos">
+            <div class="section_pic-container">
+                <img src="./assets/DSC_9668.png" alt="Test">
+            </div>
+            <div id="social-media">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" 
+                alt="ORCID"
+                class="icon" 
+                onclick="location.href='https://orcid.org/0000-0003-0319-1562'">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" 
+                alt="Research Gate"
+                class="icon" 
+                onclick="location.href='https://www.researchgate.net/profile/Mathias-Bellat'">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" 
+                alt="google-scholar"
+                class="icon" 
+                onclick="location.href='https://scholar.google.com/citations?user=FF1d6kUAAAAJ&hl'">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b7/HAL_archive-logo_%282021%29-colors.svg" 
+                alt="HAL"
+                class="icon" 
+                onclick="location.href='https://hal.science/search/index/?q=*&authIdPerson_i=752168'">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+                alt="GitHub"
+                class="icon" 
+                onclick="location.href='https://github.com/mathias-bellat'">
+                <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/Logo_Mastodon_%28Software%29.svg" 
+                alt="Mastodon"
+                class="icon" 
+                onclick="location.href='https://archaeo.social/@Mathias_bellat'">
+            </div>
+        </div>
+        <div class="section_summary">
+            <h1>PhD. candidate in Archaeological Sciences</h1>
+            <p>I am an archaeologist and geographer, primarily interested in archaeological sciences under theoretical and methodological aspects. 
+                My curents researches are on the applications of geosciences to answer archaeological questions with a focus on multi-scalar approaches. 
+                I am using either statistical and modern machine learning approaches or more traditional geoarchaeological proxies (<em>e.g.</em> micromorphology, 
+                pedology, stratigraphy) to depict past environement humans interactions. My research areas are located mainly in Southwestern Asia (Iraq, Southern Caucasus, Saudi-Arabia).
+            </p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">CV</button>
+                <button class="btn btn-color-1" onclick="window.location.href='mailto:mathias.archaeology@gmail.com?subject=Contact';">Contact</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="Positions" class="section">
+            <div class="container">
+            <h2>Positions</h2>
+            <div class="timeline">
+                <div class="timeline-item" onclick="window.open('https://trajectoires.cnrs.fr/', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo//Trajectoire.png" alt="Trajectoire" class="logo">
+                            <span class="date">2026 - Now</span>
+                        </div>
+                        <h3>CNRS UMR-8215 Trajectoires</h3>
+                        <h4>Research Assistant</h4>
+                        <p>Research assistant on the ARABIANCAIRNS project (Dir. O. Munoz). Structuration and filling of a cairns/tombs database over the all Arabian Peninsula</p>
+                        <div class="skills">
+                            <span class="skill">G.I.S</span>
+                            <span class="skill">Spatial analysis</span>
+                            <span class="skill">Funerary landscape</span>
+                            <span class="skill">Database</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="window.open('https://lettres.sorbonne-universite.fr/faculte-des-lettres/ufr/ufr-de-geographie-et-amenagement', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo//logo lettres.png" alt="Srobonne" class="logo">
+                            <span class="date">2025 - 2026</span>
+                        </div>
+                        <h3>Sorbonne University</h3>
+                        <h4>Lecturer</h4>
+                        <p>Full-time lecturer for the Geography department.</p>
+                        <div class="skills">
+                            <span class="skill">Physical geography teaching</span>
+                            <span class="skill">Bachelor level teachning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="window.open('https://uni-tuebingen.de/forschung/forschungsschwerpunkte/sonderforschungsbereiche/sfb-1070/', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/SFB.png" alt="SFB" class="logo">
+                            <span class="date">2021 - 2025</span>
+                        </div>
+                        <h3>CRC 1070 "ResourceCultures"</h3>
+                        <h4>PhD. Contract</h4>
+                        <p>Use of geosciences modern approaches (FTIR, machine learning, digital soil mapping) to understand soil-human relations in northern Iraq. Different soil surveys and excavations have been conducted on the field, followed by diverse machine learning and statistical approaches to understand this relation.</p>                        
+                        <div class="skills">
+                            <span class="skill">Academic articles</span>
+                            <span class="skill">International collaborations</span>
+                            <span class="skill">Soil survey</span>
+                            <span class="skill">Machine learning</span>
+                            <span class="skill">Geoarchaeology</span>
+                            <span class="skill">Soutwestern Asia archaeology</span>
+                            <span class="skill">FTIR</span>
+                            <span class="skill">Digital soil mapping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" onclick="window.open('https://passionmedievistes.fr/hlm-6-site-fouilles-archeologie-moulineaux/', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/Monachus.png" alt="Monachus" class="logo-small">
+                            <span class="date">2021</span>
+                        </div>
+                        <h3>Monachus</h3>
+                        <h4>Excavation leader</h4>
+                        <p>Direction of a team of 8 - 10 archaeologists and specialists on Medieval and Modern excavation site (Yvelines, France). An experience in the organisation of the excavation (technical, public relations and administrative overview).</p>
+                        <div class="skills">
+                            <span class="skill">Team leading</span>
+                            <span class="skill">Scientific project</span>
+                            <span class="skill">Public relations</span>
+                            <span class="skill">Budget management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="project" class="section">
+        <h2>Projects</h2>
+        <div class="box box-clickable" onclick="toggleList('dropdown-content-1')" style="font-size: 22px;">Actual projects</div>
+        <div id="dropdown-content-1" class="dropdown-content" style="max-height: 1000px;">
+            <ul>
+                <li>
+                    <img src="./assets/logo/MAE.jpg" alt="Boyuk" class="icon-box" onclick="location.href='https://umrtemps.cnrs.fr/terrain/kicik-tepe'">
+                    <a href="https://umrtemps.cnrs.fr/terrain/kicik-tepe" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2025 - Now] MAE Boyuk Kiçik:</span>
+                            <span class="item-description"> Research program on the Neolithic of the Middle Kura Valley in Azerbaijan with a focus on Qaraçinar and kicik-tepe sites. Part of the scientific team.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/MAE.jpg" alt="MPKI" class="icon-box" onclick="location.href='https://archeologie.culture.gouv.fr/monde/en/sarsyan-rostam-agha-shelter'">
+                    <a href="https://archeologie.culture.gouv.fr/monde/en/sarsyan-rostam-agha-shelter" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2025 - Now] MAE MPKI:</span>
+                            <span class="item-number"> Mission Préhistorique au Kurdistan Irakien:</span>
+                            <span class="item-description"> Research program on the Middle and Late Paleolithic of the western Kurdistan region of Iraq (Soulaimaniah governorate), survey mission. Part of the scientific team.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/ANR.png" alt="ARABIANCAIRNS" class="icon-box" onclick="location.href='https://anr.fr/Project-ANR-22-CE27-0001'">
+                    <a href="https://anr.fr/Project-ANR-22-CE27-0001" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2024 - Now] ANR ARABIANCAIRNS:</span>
+                            <span class="item-number"> ANR-22-CE27-0001:</span>
+                            <span class="item-description"> "An integrated approach to protohistoric monumental tombs in the Arabian Peninsula". Active participation in the spatial analysis program and geoarchaeological program.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/ANR.png" alt="Icon" class="icon-box" onclick="location.href='https://anr.fr/Project-ANR-20-FRAL-0006'">
+                    <a href="https://anr.fr/Project-ANR-20-FRAL-0006" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2021 - Now] ANR KUR(a)GAN:</span>
+                            <span class="item-number"> ANR-22-CE27-0001:</span>
+                            <span class="item-description"> "From Kura-Araxes to Early Kurgans. Tracing 3rd millennium social and cultural changes in the Kura river valley (Georgia and Azerbaijan). Environment, food, chronology". Excavation and construction materials analysis (micromorphology).</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>      
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="box box-clickable" onclick="toggleList('dropdown-content-2')" style="font-size: 22px;">Former projects</div>
+        <div id="dropdown-content-2" class="dropdown-content">
+            <ul>
+                <li>
+                    <img src="./assets/logo/SFB.png" alt="Icon" class="icon-box" onclick="location.href='https://gepris.dfg.de/gepris/projekt/240000619'">
+                    <a href="https://gepris.dfg.de/gepris/projekt/240000619" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2021 - 2025] SFB1070 "ResourceCultures":</span>
+                            <span class="item-number"> 215859406:</span>
+                            <span class="item-description"> "B07 - A hunt for raw materials? Spatial Models in the Resource Cultures of the Northern Mesopotamian Periphery?". First investigator for the soil science program.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/ANR.png" alt="Icon" class="icon-box" onclick="location.href='https://anr.fr/Projet-ANR-19-CE27-0026'">
+                    <a href="https://anr.fr/Projet-ANR-19-CE27-0026" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2020 - 2024] 2MI:</span>
+                            <span class="item-number"> ANR-19-CE27-0026:</span>
+                            <span class="item-description"> Migrations, mobilités, innovations : Interpréter les changements du Néolithique à l’Âge du Bronze (Sud Caucase, Nord Iran). Excavation and construction materials analysis (micromorphology).</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/ANR.png" alt="Icon" class="icon-box" onclick="location.href='https://anr.fr/Projet-ANR-12-FRAL-0011'">
+                    <a href="https://anr.fr/Projet-ANR-12-FRAL-0011" class="item-link">
+                        <div class="item-text-horizontal">
+                            <span class="item-title">[2013 - 2016] "Kura in Motion!":</span>
+                            <span class="item-number"> ANR-12-FRAL-0011:</span>
+                            <span class="item-description"> "Humans, plants and animals in the Middle Kura Valley, 6th to 3rd millennia BCE". <em>A posteriori</em> participation, on construction materials analysis (micromorphology).</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>   
+        </div>
+        <div style="height: 50px;"></div>
+
+
+        <h2>Excavations and field work</h2>    
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-overlay" id="mapOverlay"></div>
+            <div class="info-box" id="infoBox">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <h3 id="locationTitle">Name</h3>
+                <div class="Date" id="locationDate">Date</div>
+                <p id="locationDescription">Description</p>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    </section>
+
+
+    <a href="#formation"></a>
+    <section id="formation" class="section">
+            <div class="container-formation">
+            <h2>Formation</h2>
+            <div class="timeline">
+                <div class="timeline-item" onclick="window.open('https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/geowissenschaften/arbeitsgruppen/geographie/forschungsbereich/bodenkunde-und-geomorphologie/work-group/#c1333051', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/Uni_Logo.png" alt="Tub" class="logo">
+                            <span class="date">2021 - Now</span>
+                        </div>
+                        <h3>University of Tübingen</h3>
+                        <h4>PhD. Candidate, Natural science facutly, Geography department</h4>
+                        <p>Under the supervision of Prof. T. Scholten and Prof. P. Pfälzner on the: <em>New insights of geosciences methodological approaches in archaeology. Machine learning and digital soil mapping contribution to the understanding of archaeological settlements patterns from the Bronze to Iron age in the Iraqi Kurdistan region.</em></p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="window.open('https://formation.mnhn.fr/fr/master-licence/presentation-master-bee/parcours/quaternaire-prehistoire-bioarcheologie-2681', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/MNHN-logo.png" alt="MNHN-bis" class="logo-small">
+                            <span class="date">2019 - 2021</span>
+                        </div>
+                        <h3>Museum National d'Histoire Naturelle</h3>
+                        <h4>Master degree in <em>Ecology Biodiversity and Evolution</em> with focus on Quaternary, Prehistory and Bioarchaeology</h4>
+                        <p>Under the supervision of C. Cammas, E. Baudouin and S. Puaud on: <em>The micromorphology contribution to the study of construction techniques and their diffusion during Neolithic, the case of Mentesh Tepe (Middle Kura valley, Azerbaijan).</em></p>
+                    </div>
+                </div>
+                    <div class="timeline-item" onclick="window.open('https://www.geschkult.fu-berlin.de/e/vaa/index.html', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/Frei_Uni.png" alt="FU" class="logo">
+                            <span class="date">2020 - 2021</span>
+                        </div>
+                        <h3>Freie Universtät Berlin</h3>
+                        <h4>Erasmus exchange in the Institut für Vorderasiatische Archäologie</h4>
+                    </div>
+                </div>
+                    <div class="timeline-item" onclick="window.open('https://formations-lettres.sorbonne-universite.fr/fr/index/double-licence-XD/sciences-humaines-et-sociales-SHS/double-licence-archeologie-geographie-LAHAR1L_661.html', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/logo lettres.png" alt="Sorbone" class="logo">
+                            <span class="date">2016 - 2019</span>
+                        </div>
+                        <h3>Sorbonne Université</h3>
+                        <h4>Bachelor degree in <em>Archaeology and Art-History</em> from the double-bachelor <em>archaeology-geography</em></h4>
+                    </div>
+                </div>
+                    <div class="timeline-item" onclick="window.open('https://formations-lettres.sorbonne-universite.fr/fr/index/double-licence-XD/sciences-humaines-et-sociales-SHS/double-licence-archeologie-geographie-LAHAR1L_661.html', '_blank')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="date-container">
+                            <img src="./assets/logo/logo lettres.png" alt="Sorbone-bis" class="logo">
+                            <span class="date">2016 - 2019</span>
+                        </div>
+                        <h3>Sorbonne Université</h3>
+                        <h4>Bachelor degree in <em>Geography and urban planing</em> from the double-bachelor <em>archaeology-geography</em></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <a href="#skills"></a>
+    <section id ="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skills-tabs">
+            <button class="tab-button active" data-tab="code">💻 Code</button>
+            <button class="tab-button" data-tab="software">🛠️ Software</button>
+            <button class="tab-button" data-tab="field">⛏️ Field</button>
+            <button class="tab-button" data-tab="lab">🧪 Lab</button>
+        </div>
+
+      <div class="skills-display">
+        <!-- CODE -->
+        <div class="skill-category active" id="code">
+          <h3 class="category-title">Coding languages</h3>
+          <div class="skills-grid">
+            <div class="donut-wrapper" data-percent="100" data-icon="./assets/logo/Rlogo.png" data-label="R"></div>
+            <div class="donut-wrapper" data-percent="100" data-icon="./assets/logo/LaTeX.png" data-label="LaTeX"></div>
+            <div class="donut-wrapper" data-percent="70" data-icon="https://cdn-icons-png.flaticon.com/512/528/528260.png" data-label="SQL"></div>
+            <div class="donut-wrapper" data-percent="50" data-icon="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" data-label="Python"></div>
+            <div class="donut-wrapper" data-percent="50" data-icon="https://cdn-icons-png.flaticon.com/512/732/732212.png" data-label="HTML/CSS"></div>
+            <div class="donut-wrapper" data-percent="30" data-icon="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" data-label="JavaScript"></div>
+          </div>
+        </div>
+
+        <!-- SOFTWARE -->
+        <div class="skill-category" id="software">
+          <h3 class="category-title">Softwares</h3>
+          <div class="skills-grid">
+            <div class="donut-wrapper" data-percent="100" data-icon="./assets/logo/QGIS.png" data-label="QGIS"></div>
+            <div class="donut-wrapper" data-percent="100" data-icon="./assets/logo/Adobe.png" data-label="Adobe"></div>
+            <div class="donut-wrapper" data-percent="80" data-icon="https://cdn-icons-png.flaticon.com/512/919/919847.png" data-label="Git"></div>
+            <div class="donut-wrapper" data-percent="75" data-icon="./assets/logo/Metashape.png" data-label="Agisoft Metashape"></div>
+            <div class="donut-wrapper" data-percent="60" data-icon="./assets/logo/Arcgis.png" data-label="Arcgis"></div>
+            <div class="donut-wrapper" data-percent="40" data-icon="https://cdn-icons-png.flaticon.com/512/552/552220.png" data-label="Photoshop"></div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="field">
+          <h3 class="category-title">Field skills</h3>
+          <div class="field-skills">
+            <div class="field-skill"><div class="field-skill-name">Excavation</div><div class="field-skill-desc">Stratigraphic excavation method</div></div>
+            <div class="field-skill"><div class="field-skill-name">Georeferencing</div><div class="field-skill-desc">Total station competences</div></div>
+            <div class="field-skill"><div class="field-skill-name">Micro-sampling</div><div class="field-skill-desc">Micromorphological section sampling</div></div>
+            <div class="field-skill"><div class="field-skill-name">Geoarchaeological sampling</div><div class="field-skill-desc">Datation (OSL, <sup>14</sup>C), bioremains, geological sampling capacities </div></div>
+            <div class="field-skill"><div class="field-skill-name">Drone</div><div class="field-skill-desc">French drone driving formation (AlphaTango)</div></div>
+          </div>
+        </div>
+
+        <!-- LAB -->
+        <div class="skill-category" id="lab">
+          <h3 class="category-title">Laboratory skills</h3>
+          <div class="field-skills">
+            <div class="field-skill"><div class="field-skill-name">FTIR</div><div class="field-skill-desc">Mid-infrared measurement on Bruker Vertex80v</div></div>
+            <div class="field-skill"><div class="field-skill-name">Thin-section</div><div class="field-skill-desc">Thin section fabrication and analysis</div></div>
+            <div class="field-skill"><div class="field-skill-name">Microscope</div><div class="field-skill-desc">Polarised-microscope analysis for micromorphology thin-section</div></div>
+            <div class="field-skill"><div class="field-skill-name">Grain-size</div><div class="field-skill-desc">Grain size measurement with sieving or laser diffraction analysis </div></div>
+            <div class="field-skill"><div class="field-skill-name">Soil chemical analysis</div><div class="field-skill-desc">Soil chemical principal component measurement (pH, CaCO<sup>3</sup>, electroconductivity ...)</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <a href="#publications"></a>
+    <section id ="publications" class="section">
+        <h2> Publications</h2>
+        <div class="container">
+            <h1>📚</h1>
+        
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="searchName">Look by</label>
+                    <input type="text" id="searchName" placeholder="Author, title...">
+                </div>
+            
+                <div class="filter-group">
+                    <label for="filterType">Type of publication</label>
+                    <select id="filterType">
+                        <option value="">All type</option>
+                        <option value="Article">Journal article</option>
+                        <option value="Pre-print">Pre-print</option>
+                        <!-- <option value="Proceedings">Proceedings</option> -->
+                        <option value="Data">Data</option>
+                        <option value="Report">Reports</option>
+                        <option value="NPR">Non peer review journal</option>
+                       <!--  <option value="Conférence">Conference proceedings</option>
+                        <option value="Livre">Book chapter</option>  -->
+                    </select>
+                </div>
+            
+                <div class="filter-group">
+                    <label for="searchKeywords">Keywords</label>
+                    <input type="text" id="searchKeywords" placeholder="Artifical intelligence...">
+                </div>
+            
+                <div class="filter-group">
+                    <label for="filterYear">Year</label>
+                    <select id="filterYear">
+                        <option value="">All years</option>
+                    </select>
+                </div>
+            
+                <div class="filter-group">
+                    <label>&nbsp;</label>
+                    <button class="reset-btn" onclick="resetFilters()">Reset</button>
+                </div>
+            </div>
+
+            <div class="results-count" id="resultsCount"></div>
+        
+            <div class="publications" id="publicationsList"></div>
+
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+    
+    <a href="#communication"></a>
+    <section id="communication" class="section">
+        <h2>Communications</h2>
+
+          <div class="year-box-com box-clickable-com open" onclick="toggle(this)">2026 <span class="chevron">▼</span></div>
+            <div class="dropdown-content-com" style="max-height: 1000px;">
+
+            <ul>
+                <li>
+                    <img src="https://gfg.cnrs.fr/wp-content/uploads/2020/05/logo-princ.jpg" alt="JJG-2026" class="icon-box-com">
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] JJG 2026:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>. "La contribution de la cartographie automatisé des sols et paléosols à la compréhension des dynamiques de populations de l’Age du Bronze et du Fer au Kurdistan irakien."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://2026.caaconference.org/wp-content/uploads/sites/7/2025/06/cropped-CAA2026-Vienna_header-1.png" alt="CAA-2026" class="icon-box-com" onclick="location.href='https://hal.science/hal-05584331'">
+                    <a href="https://hal.science/hal-05584331" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] CAA 2026:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Thibaut Guiet, Tara Beuzen-Waller, Sophie Pébay-Peyroula, Olivia Munoz. "Mortuary landscape during protohistory in the Arabian Peninsula."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="/assets/logo/LAC_2026.png" alt="LAC-2026" class="icon-box-com" onclick="location.href='https://hal.science/hal-05561233'">
+                    <a href="https://hal.science/hal-05561233" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] LAC 2026:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Biel Sorano-Elias. "Water resource importance in various climatic contexts toward a machine learning approach."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/CAA-FR.png" alt="ACQUA-2026" class="icon-box-com" onclick="location.href='https://hal.science/hal-05505553'">
+                    <a href="https://hal.science/hal-05505553" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and scientific commity] ACQUA 2026:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>. "Tout n’est pas carré ! Exemple de tessellation de raster sur R et de validation de la transformation."</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>      
+        </div>
+        <div style="height: 10px;"></div>
+          <!-- 2025 — fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">2025 <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                <li>
+                    <img src="https://eur-archal.pantheonsorbonne.fr/sites/default/files/styles/block_rich_image/public/2023-10/logo-archal.jpg.webp?h=10a69ff2&itok=FhrWeUih" alt="MPAF-2025" class="icon-box-com" onclick="location.href='https://hal.science/hal-05479463'">
+                    <a href="https://hal.science/hal-05479463" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] Modeling the Past to Anticipate the Future 2025:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>. "Paleosol models with machine learning approach: study in Iraqi Kurdistan and soils influence on settlement patterns from 2500 to 330 B.C."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://www.archeorient.mom.fr/sites/archeorient.mom.fr/files/styles/actualites_250_x_250/public/logo-du-site_Plan%20de%20travail%201_0.png?itok=ZqifH5lO" alt="ICAANE-2025" class="icon-box-com">
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and workshop organiser] ICAANE 2025:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Tara Beuzen-Waller, Luca Forti. "Geoarchaeology in Southwestern Asia: specificities, current applications and perspectives."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://zenodo.org/api/communities/40d1bfed-cc00-4f33-bd79-b7793ec44454/logo" alt="CAA-2025-1" class="icon-box-com" onclick="location.href='https://www.researchgate.net/publication/391697461_Image_Data_for_Neural_Networks_Insights_from_Existing_Archaeology_Research'">
+                    <a href="https://www.researchgate.net/publication/391697461_Image_Data_for_Neural_Networks_Insights_from_Existing_Archaeology_Research" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and session chair] CAA 2025:</span>
+                            <span class="item-description-com"> Jordy D. Orellana Figueroa, <strong>Mathias Bellat</strong>, Jonathan S. Reeves, Claudio Tennie, Thomas Scholten. "Image Data for Neural Networks: Insights from Existing Archaeology Research"."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://zenodo.org/api/communities/40d1bfed-cc00-4f33-bd79-b7793ec44454/logo" alt="CAA-2025-2" class="icon-box-com" onclick="location.href='https://hal.science/hal-05068065'">
+                    <a href="https://hal.science/hal-05068065" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] CAA 2025:</span>
+                            <span class="item-description-com"> Amy Hatton, <strong>Mathias Bellat</strong>,  Jordy D. Orellana Figueroa, Jonathan S. Reeves, Claudio Tennie, Huw S. Groucutt, Thomas Scholten. "Humans are you there? Comparative approach of two distinguishable methods for human installation detection: automatic structure detection and archaeological predictive models."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://zenodo.org/api/communities/40d1bfed-cc00-4f33-bd79-b7793ec44454/logo" alt="CAA-2025-3" class="icon-box-com" onclick="location.href='https://hal.science/hal-05068051'">
+                    <a href="https://hal.science/hal-05068051" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] CAA 2025:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Edward Leland, Benjamin Glissmann, Paola Sconzo, Peter Pfälzner, Thomas Scholten. "Soil influence on settlement patterns in Northern Kurdistan region (Iraq): Impact of soil quality indexes and other environmental covariates on archaeological predictive models in a semi-arid environment."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/kiel.png" alt="kiel-2025" class="icon-box-com" onclick="location.href='https://www.researchgate.net/publication/390554401_An_Overview_of_Machine_Learning_Applications_in_Archaeological_Research'">
+                    <a href="https://www.researchgate.net/publication/390554401_An_Overview_of_Machine_Learning_Applications_in_Archaeological_Research" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] Kiel Conference 2025:</span>
+                            <span class="item-description-com">  Jordy D. Orellana Figueroa, <strong>Mathias Bellat</strong>, Jonathan S. Reeves, Ruhollah Taghizadeh-Mehrjardi, Thomas Scholten, Claudio Tennie. "An Overview of Machine Learning Applications in Archaeological Research."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/CAA-FR.png" alt="ACQUA-2025-1" class="icon-box-com" onclick="location.href='https://hal.science/hal-04927059'">
+                    <a href="https://hal.science/hal-04927059" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and scientific commity] ACQUA 2025:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>. "Isolé mais pas esseulé: Pratiques individuelles et communautés de pratiquants de L’archéologie computationnelle (apprentissage automatisé)."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/CAA-FR.png" alt="ACQUA-2025-2" class="icon-box-com" onclick="location.href='https://doi.org/10.5281/zenodo.14824371'">
+                    <a href="https://doi.org/10.5281/zenodo.14824371" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Poster and scientific commity] ACQUA 2025:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Julie Gravier. "L'organisation internationale Computer Applications and Quantitative Methods in Archaeology et le chapitre français."</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 10px;"></div>
+          <!-- 2024 — fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">2024 <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                <li>
+                    <img src="https://2024.caa-international.org/wp-content/uploads/sites/2/2022/11/cropped-2022-11-15-banner-1080x410px.png" alt="CAA-2024" class="icon-box-com" onclick="location.href='https://hal.science/hal-04612232'">
+                    <a href="https://hal.science/hal-04612232" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and session chair] CAA 2024:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Thomas Scholten. "Automated features detection in archaeology: Standardisation in the area of big data."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://2024.caa-international.org/wp-content/uploads/sites/2/2022/11/cropped-2022-11-15-banner-1080x410px.png" alt="CAA-2024" class="icon-box-com" onclick="location.href='https://hal.science/hal-04613953'">
+                    <a href="https://hal.science/hal-04613953" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Poster and session chair] CAA 2024:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Ruhollah Tagizadeh-Mehrjardi, Thomas Scholten. "Fail and try again: Return on topic modelling apply to archaeological scientific literature."</span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div style="height: 10px;"></div>
+          <!-- 2023 — fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">2023 <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                <li>
+                    <img src="https://www.canal-u.tv/sites/default/files/styles/logo_chaine_menu_desktop/public/medias/images/chaine/2026/01/logo_inrap.png?itok=UXGs0uVg" alt="INRAP-2023" class="icon-box-com" onclick="location.href='https://doi.org/10.34692/d94f-r540'">
+                    <a href="https://doi.org/10.34692/d94f-r540" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] Lire le sol en archéologie: pratiques de terrain et regards croisées, INRAP 2022:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Emmanuel Baudouin, Cécilia Cammas. "Regards croisées sur l’occupation d’un bâtiment néolithique dans le sud Caucase : observations de terrains et étude micromorphologique à Mentesh Tepe (Azerbaïdjan)."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://www.e-a-a.org/images/EAA/EAA2023/EAA2023-Logo-Final-01_small_web.jpg?version=EFC93510" alt="EAA-2023" class="icon-box-com" onclick="location.href='https://hal.science/hal-04611499'">
+                    <a href="https://hal.science/hal-04611499" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation and session chair] EAA 2023:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Ria Litzenberg, Annika Rebentisch, Harald Floss, Nicholas J Conard, Thomas Scholten. "Understanding the development and expansion of resource uses and access through time with the ResourceCultures concept applied in three study-cases."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://inquaroma2023.org/wp-content/uploads/2022/01/logoinquasmall-white.png" alt="INQUA-2023" class="icon-box-com" onclick="location.href='https://hal.science/hal-04610073'">
+                    <a href="https://hal.science/hal-04610073" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] INQUA 2023:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Tobias Rentschler, Benjamin Glismman, Ruhollah Tagizadeh-Mehrjardi, Paola Sconzo, Peter Pfälzner, Thomas Scholten. " From site observation to regional interpretation, the influence of multi-scalar approach on soil properties and their archaeological implication: Kurdistan (Iraq)."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://medialib.cmcdn.dk/medialibrary/7D0CE58D-6061-4B05-80A4-1B2A9EE338D8/1C87D53C-C4AB-ED11-84C1-00155D0B0940.png" alt="ICAANE-2023" class="icon-box-com" onclick="location.href='https://hal.science/hal-04608644'">
+                    <a href="https://hal.science/hal-04608644" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] ICAANE 2023:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Benjamin Glissmann, Ruhollah Tagizadeh-Mehrjardi, Tobias Rentschler, Paola Sconzo, Peter Pfälzner, Thomas Scholten. " Can soil information add value for the archaeological predictive model?"</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://sites.caa-international.org/caa2023/wp-content/uploads/sites/29/2022/11/frontpage-banner.jpg" alt="CAA-2023" class="icon-box-com" onclick="location.href='https://hal.science/hal-04601297'">
+                    <a href="https://hal.science/hal-04601297" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Poster] CAA 2023:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Benjamin Glissmann, Ruhollah Tagizadeh-Mehrjardi, Tobias Rentschler, Paola Sconzo, Peter Pfälzner, Thomas Scholten. "Spatial soil information as a proxy for archaeological predictive modelling in arid regions: the Selevani plain example (Kurdistan, Iraq)."</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 10px;"></div>
+          <!-- 2022 — fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">2022 <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                <li>
+                    <img src="https://egu22.eu/template_egu22_logo.svg" alt="EGU-2022" class="icon-box-com" onclick="location.href='https://hal.science/hal-04596780'">
+                    <a href="https://hal.science/hal-04596780" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] EGU 2022:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Benjamin Glissmann, Tobias Rentschler, Karsten Schmidt, Paola Sconzo, Peter Pfälzner, Thomas Scholten. "Unraveling archaeological settlement, landscape, and resource use patterns with machine learning in Kurdistan (Iraq)."</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://q13.sciencesconf.org/data/header/bandeau_2.jpg" alt="Q13-2022" class="icon-box-com" onclick="location.href='https://hal.science/hal-03551422'">
+                    <a href="https://hal.science/hal-03551422" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Poster] Q13 2022:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Benjamin Glissmann, Tobias Rentschler, Sconzo Paola, Peter Pfläzner, Thomas Scholten. "What does matter? Machine Learning models to define archaeological patterns of site occupations and resource use in Kurdistan (Iraq) through a diachronic approach."</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 10px;"></div>
+          <!-- 2021 — fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">2021 <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                <li>
+                    <img src="https://www.archaeology.wiki/wp-content/uploads/2021/01/EAA_2021.jpg" alt="EAA-2021" class="icon-box-com" onclick="location.href='https://hal.science/hal-03547782'">
+                    <a href="https://hal.science/hal-03547782" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com">[Presentation] EAA 2021:</span>
+                            <span class="item-description-com">  <strong>Mathias Bellat</strong>, Emmanuel Baudouin, Cécilia Cammas. "A matter of scale! Field observations and micromorphological analyses on earthen materials at Mentesh Tepe (Middle Kura Valley, Azerbaijan) in the Neolithic period."</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 8px;"></div>
+    </section>
+
+<div style="height: 40px;"></div>
+
+
+<a href="#teaching"></a>
+    <section id="teaching" class="section">
+        <h2>Teaching</h2>
+
+          <div class="year-box-com box-clickable-com open" onclick="toggle(this)">Classes <span class="chevron">▼</span></div>
+            <div class="dropdown-content-com" style="max-height: 1000px;">
+
+            <ul>
+                <li>
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2025 - 2026 Sorbonne University:</span>
+                            <span class="item-description-com">  <strong>L1GEENVE 96 Hours</strong>. Introduction to physical geography (geosystem) for the first year bachelor.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2022 - 2025 Tübingen University:</span>
+                            <span class="item-description-com">  <strong>GEO77 48 Hours</strong>. Digital soil mapping and introduction to machine learning application with R language for master.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2022 - 2023 Tübingen University:</span>
+                            <span class="item-description-com">  <strong>GEO25 12 Hours</strong>. Introduction to statistics and R language for the first year bachelor.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2023 OMEA (Lyon):</span>
+                            <span class="item-description-com">  Initiation to thin section realisation</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>      
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">Supervision <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+            <li>
+                <a>
+                <div class="item-text-horizontal-com">
+                    <span class="item-title-com">2023 - 2025, Thibaut Guiet Ms.C., University of Perpignan</span>
+                    <span class="item-description-com">Apport des systèmes d’information géographiques pour la caractérisation des facteurs de localisation des nécropoles protohistoriques à cairn à l’échelle de l’Arabie.</span>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                <div class="item-text-horizontal-com">
+                    <span class="item-title-com">2023 - 2024, Edward Leeland Ms.C., University of Tübingen</span>
+                    <span class="item-description-com"> Computational Answers to Theoretical Debates, a <em>MaxEnt</em> Framework for Addressing Argaric Assumptions.</span>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                <div class="item-text-horizontal-com">
+                    <span class="item-title-com">2022 - 2023, Anaëlle Generet Ms.C., Pantheon Sorbonne University</span>
+                    <span class="item-description-com"> Application de la méthode <em>HBIM</em> en archéologie: étude de cas du prieuré des Moulineaux dans les Yvelines.</span>
+                </div>
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div style="height: 8px;"></div>
+    </section>
+
+<div style="height: 40px;"></div>
+
+
+<a href="#other"></a>
+  <section id="other" class="section">
+        <h2>Others</h2>
+
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">Conference organisation <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+
+            <ul>
+                <li>
+                    <img src="./assets/logo/CAA-FR.png" alt="ACQUA-2026" class="icon-box-com" onclick="location.href='https://caafrance.hypotheses.org/2304'">
+                    <a href="https://caafrance.hypotheses.org/2304" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> ACQUA 09 - 10 February 2026, University of Tours</span>
+                            <span class="item-description-com">  Part of the scientific and organiser commity.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="./assets/logo/CAA-FR.png" alt="ACQUA-2025" class="icon-box-com" onclick="location.href='https://caafrance.hypotheses.org/754'">
+                    <a href="https://caafrance.hypotheses.org/754" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> ACQUA 29 - 30 January 2025, University of Nanterre</span>
+                            <span class="item-description-com">  Part of the scientific and organiser commity.</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>      
+        </div>
+        <div style="height: 1cqh;"></div>
+          <!-- fermé -->
+        <div class="year-box-com box-clickable-com" onclick="toggle(this)">Editorial roles <span class="chevron">▼</span></div>
+        <div class="dropdown-content-com">
+            <ul>
+                 <li>
+                    <img src="https://archaeo.peercommunityin.org/PCIArchaeology/static/_26.6.0/images/background.png" alt="PCI-archaeology" class="icon-box-com">
+                    <a>
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2023 - Now, PCI archaeology:</span>
+                            <span class="item-description-com"> Recommender for CAA proceedings and other manuscript [7 evaluations].</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://ars.els-cdn.com/content/image/X29502365.jpg" alt="CAA-2026" class="icon-box-com" onclick="location.href='https://www.sciencedirect.com/special-issue/326935/multi-proxy-geoarchaeology-in-southwest-asia-methods-scales-and-human-environment-dynamics'">
+                    <a href="https://www.sciencedirect.com/special-issue/326935/multi-proxy-geoarchaeology-in-southwest-asia-methods-scales-and-human-environment-dynamics" class="item-link-com">
+                        <div class="item-text-horizontal-com">
+                            <span class="item-title-com"> 2026, Quaternary Environments and Humans:</span>
+                            <span class="item-description-com"> Guest editor for the special issue "Multi-proxy geoarchaeology in Southwest Asia: methods, scales, and human–environment dynamics" with Tara Beuzen-Waller and Luca Forti.</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+            </ul>
+        </div>
+        <div style="height: 8px;"></div>
+    </section>
+
+    <script src="script.js"></script>
+    </body>
+</html>
+

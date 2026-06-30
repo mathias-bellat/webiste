@@ -1,0 +1,134 @@
+@media screen and (max-width: 768px) {
+    /* Navigation mobile */
+    #desktop-nav {
+        display: none;
+    }
+    
+    #hamburger-nav {
+        display: flex;
+    }
+    
+    /* Sections */
+    section {
+        margin: 0 1rem;
+        min-height: auto; /* IMPORTANT : supprime min-height: 100vh */
+        padding: 20px 10px;
+        margin-bottom: 40px; /* Espace entre sections */
+    }
+    
+    #profile {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    .section_infos {
+        padding: 20px;
+        margin-bottom: 20px;
+        order: 1; /* Image en premier */
+    }
+    
+    .section_summary {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        order: 2; /* Texte en second */
+    }
+    
+    .section_pic-container {
+        height: 280px;
+        width: 280px;
+    }
+    
+    #social-media {
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }
+    
+    .icon {
+        height: 2.2rem;
+    }
+    
+    /* Timeline responsive */
+    .timeline-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 80px;
+        margin-right: 0;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        margin: 0 0.5rem;
+        padding: 15px 5px;
+    }
+    
+    .section_pic-container {
+        height: 220px;
+        width: 220px;
+    }
+    
+    .section_summary {
+        padding: 15px 12px;
+    }
+    
+    .section_summary p {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+    
+    .btn {
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 8rem;
+    }
+    
+    .icon {
+        height: 2rem;
+    }
+    
+    /* Timeline mobile */
+    .timeline-header h1 {
+        font-size: 2rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+        width: 16px;
+        height: 16px;
+    }
+}
