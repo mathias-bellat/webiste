@@ -450,13 +450,35 @@ let filteredPublications = [];
 
 const publications = [
 
+   {
+        title: "Testing the water: Importance of surface water resources for settlement installation in various climatic contexts using a machine learning approach",
+        authors: "Bellat, M., Soriano-Elias, B.",
+        type: "Pre-print",
+        year: 2026,
+        journal: "SocArXiv",
+        logo: "/assets/logo/SocArXiv_logo.jpg",
+        url: " https://osf.io/preprints/socarxiv/2rgkb_v1/",
+        keywords: ["archaeological predictive model", "aridity", "Bronze Age", "Iron Age", "machine learning", "water resource" ]
+    },
+
+   {
+        title: "Supplementary information for: Testing the water: Importance of surface water resources for settlement installation in various climatic contexts using a machine learning approach",
+        authors: "Bellat, M., Soriano-Elias, B.",
+        type: "Data",
+        year: 2026,
+        journal: "OSF",
+        logo: "/assets/logo/osf_logo.png",
+        url: "https://doi.org/10.17605/OSF.IO/CTW2U",
+        keywords: ["archaeological predictive model", "aridity", "Bronze Age", "Iron Age", "machine learning", "water resource" ]
+    },
+
     {
         title: "Comparative review of recent developments in archaeological predictive models and automatic structure detection",
         authors: "Bellat, M., Hatton, A., Orellana Figueroa, J.D.",
         type: "Pre-print",
         year: 2026,
         journal: "CAA2025 Conference Proceedings",
-        logo: "https://zenodo.org/api/communities/40d1bfed-cc00-4f33-bd79-b7793ec44454/logo",
+        logo: "/assets/logo/zenodo_logo.png",
         url: " https://doi.org/10.5281/zenodo.20610648",
         keywords: ["machine learning", "site detection", "review", "archaeological theory", "archaeological modelling" ]
     },
@@ -480,7 +502,7 @@ const publications = [
         type: "Data",
         year: 2026,
         journal: "FDAT University Tübingen",
-        logo: "https://uni-tuebingen.de/_assets/7d66ab3e4599366251c5af46f0e770b9/Images/Logo_Universitaet_Tuebingen.svg",
+        logo: "/assets/logo/Uni_Logo.png",
         url: " https://doi.org/10.57754/FDAT.d5h1h-4x027",
         keywords: ["soil science", "spectroscopy", "Iraq", "geographical information systems" ]
     },
@@ -502,7 +524,7 @@ const publications = [
         type: "Article",
         year: 2025,
         journal: "Journal of Computer Applications in Archaeology",
-        logo: "https://storage.googleapis.com/jnl-up-j-jcaa-public/journals/1/societyLogoImage_en_US.png?t=1764113160000",
+        logo: "/assets/logo/CAA_logo.png",
         url: "https://doi.org/10.5334/jcaa.201",
         keywords: ["archaeological science", "computing science", "state of art", "artificial intelligence", "machine learning" ]
     },
@@ -513,7 +535,7 @@ const publications = [
         type: "Report",
         year: 2025,
         journal: "Rapport MEAE",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/MAE.jpg",
         keywords: ["Kurdistan", "Paleolithic", "cave", "survey"]
     },
 
@@ -523,7 +545,7 @@ const publications = [
         type: "Pre-print",
         year: 2025,
         journal: "ArXiv",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/7/7a/ArXiv_logo_2022.png",
+        logo: "/assets/logo/ArXiv_logo.png",
         url: "https://arxiv.org/abs/2501.03840",
         keywords: ["archaeological science", "computing science", "state of art", "artificial intelligence", "machine learning" ]
     },
@@ -535,7 +557,7 @@ const publications = [
         type: "Data",
         year: 2024,
         journal: "PANGAEA",
-        logo: "https://www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/layout-images/pangaea-logo.png",
+        logo: "/assets/logo/pangaea-logo.png",
         url: "https://doi.org/10.1594/PANGAEA.973700",
         keywords: ["digital soil mapping", "FTIR", "spectroscopy", "Iraq", "machine learning", "soil depth", "soil properties", "spatial modelling"]
     },
@@ -546,7 +568,7 @@ const publications = [
         type: "Data",
         year: 2024,
         journal: "PANGAEA",
-        logo: "https://www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/layout-images/pangaea-logo.png",
+        logo: "/assets/logo/pangaea-logo.png",
         url: "https://doi.org/10.1594/PANGAEA.973714",
         keywords: ["digital soil mapping", "FTIR", "spectroscopy", "Iraq", "machine learning", "soil depth", "soil properties", "spatial modelling"]
     },
@@ -557,7 +579,7 @@ const publications = [
         type: "Data",
         year: 2024,
         journal: "PANGAEA",
-        logo: "https://www.pangaea.de/assets/v.6b7105a5fd061af46552d8c6ee53c11c/layout-images/pangaea-logo.png",
+        logo: "/assets/logo/pangaea-logo.png",
         url: "https://doi.org/10.1594/PANGAEA.973701",
         keywords: ["digital soil mapping", "FTIR", "spectroscopy", "Iraq", "machine learning", "soil depth", "soil properties", "spatial modelling"]
     },
@@ -580,7 +602,7 @@ const publications = [
         type: "NPR",
         year: 2024,
         journal: "Histoire Médiévale et Archéologie",
-        logo: "https://www.cahmer.fr/wp-content/uploads/2014/02/logo3.png",
+        logo: "/assets/logo/cahmer_logo.png",
         url: "https://www.cahmer.fr/publications/hma-n-38-labbaye-et-lordre-de-grandmont",
         keywords: ["grandmontains", "Yvelines", "manoir seigneurial", "édifice religieux", "chapelle", "période moderne", "moyen age", "archéologie"]
     },
@@ -591,7 +613,7 @@ const publications = [
         type: "Report",
         year: 2024,
         journal: "DRAC Île-de-France",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/HAL.png",
         url: "https://hal.science/hal-04423804",
         keywords: ["grandmontains", "Yvelines", "manoir seigneurial", "édifice religieux", "chapelle", "période moderne", "moyen age", "archéologie"]
     },
@@ -602,7 +624,7 @@ const publications = [
         type: "Article",
         year: 2023,
         journal: "Journal of Archaeological Science: Reports",
-        logo: "https://ars.els-cdn.com/content/image/1-s2.0-S2352409X23X00030-cov200h.gif",
+        logo: "/assets/logo/JAS_reports_logo.jpg",
         url: "https://doi.org/10.17605/OSF.IO/RUPGY",
         keywords: ["protohistory", "earthen material", "multiscalar approach", "Aratashen-Shulaveri-Shomutepe", "facies", "building techniques"]
     },
@@ -613,7 +635,7 @@ const publications = [
         type: "Report",
         year: 2023,
         journal: "DRAC Île-de-France",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/HAL.png",
         url: "https://hal.science/hal-04135477",
         keywords: ["archéologie", "Moyen Âge", "manoir seigneurial", "celle", "Yvelines", "France", "archéologie de la période industrielle", "édifice religieux", "chapelle", "grandmontains", "archéologie moderne"]
     },
@@ -624,7 +646,7 @@ const publications = [
         type: "Report",
         year: 2022,
         journal: "DRAC Île-de-France",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/HAL.png",
         url: "https://hal.science/hal-03547747",
         keywords: ["grandmontains", "Yvelines", "manoir seigneurial", "édifice religieux", "chapelle", "période moderne", "moyen age", "archéologie"]
     },
@@ -635,7 +657,7 @@ const publications = [
         type: "Report",
         year: 2021,
         journal: "DRAC Île-de-France",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/HAL.png",
         url: "https://hal.science/hal-03547769",
         keywords: ["grandmontains", "Yvelines", "manoir seigneurial", "édifice religieux", "chapelle", "période moderne", "moyen age", "archéologie"]
     },
@@ -646,7 +668,7 @@ const publications = [
         type: "Report",
         year: 2020,
         journal: "DRAC Île-de-France",
-        logo: "https://hal.science/assets/img/hal-logo-header.png",
+        logo: "/assets/logo/HAL.png",
         url: "https://hal.science/hal-03547775",
         keywords: ["grandmontains", "Yvelines", "manoir seigneurial", "édifice religieux", "chapelle", "période moderne", "moyen age", "archéologie"]
     },
