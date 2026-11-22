@@ -51,6 +51,12 @@ let originalView = { center: [36, 22], zoom: 4 };
 // Données des marqueurs
 const locations = [
     {
+        coords: [43.967342, 0.517814],
+        title: "Nauterie",
+        date: "Since 2026",
+        description: "Gers, France, topography and excavation installation (Palaeolithic)."
+    },
+    {
         coords: [36.959108, 42.721261],
         title: "Bassetki",
         date: "2022 - 2025",
@@ -65,8 +71,8 @@ const locations = [
     {
         coords: [35.749709, 45.246259],
         title: "MPKI Survey",
-        date: "Since 2025",
-        description: "Kurdistan, Iraq, archaeological and geomorphological survey, focus on cave and rock shelter in karstic environment (Paleolithic)."
+        date: "Since 2025 (co-director since 2027)",
+        description: "Kurdistan, Iraq, archaeological and geomorphological survey, focus on cave and rock shelter in karstic environment (Palaeolithic)."
     },
     {
         coords: [40.445321, 46.630793],
